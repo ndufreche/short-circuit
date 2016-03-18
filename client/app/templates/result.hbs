@@ -1,0 +1,56 @@
+<h1>Resultat de la recherche</h1>
+<p>
+keyword: {{keyword}}<br/>
+Bio: {{isBio}} <br/>
+Find All: {{findAll}}
+</p>
+
+<label for="search-input">Recherche: </label>
+{{input type="text" value=keyword id="search-input"}}
+
+<div class="options-search">
+  <h3>Affiner sa recherche</h3>
+
+  <section>
+    <h4>Distance maximun en Km</h4>
+    <p>{{input type="range" value=bindDistance max=maxDistance min=minDistance step=stepDistance}}</p>
+    <p>
+      <label>Choisi: {{bindDistance}}</label>
+      <label>min: {{minDistance}}</label>
+      <label>max: {{maxDistance}}</label>
+    </p>
+  </section>
+
+  <section>
+    <h4>Evalution</h4>
+    <p>
+      {{input type="range" value="7" max="10" min="0" step="5" action="showValue"}}
+      <label>{{rangeValue}}</label>
+    </p>
+  </section>
+
+  <section>
+    <h4>Catégorie</h4>
+    <ul>
+      <li>
+        Alimentation
+        <ul>
+          <li>Viandes</li>
+          <li>Fruits</li>
+          <li>Légumes</li>
+        </ul>
+      </li>
+
+      <li>
+        Cosmetique
+        <ul>
+          <li>Maquillage</li>
+          <li>Soins</li>
+          <li>Huiles essentielles</li>
+        </ul>
+      </li>
+
+      <li>Artisanat</li>
+    </ul>
+  </section>
+</div>

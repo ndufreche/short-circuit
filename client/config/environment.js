@@ -18,13 +18,24 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  
+  ENV.contentSecurityPolicy = {
+    'defaut-src': "'none'",
+    'script-src': "'self' http://court-circuit-dious.c9users.io:8082",
+    'font-src': "'none'",
+    'connect-src': "'self' ws://court-circuit-dious.c9users.io:8082",
+    'img-src': "'none'",
+    'style-src': "'self' http://court-circuit-dious.c9users.io:8082",
+    'media-src': "'self'"
+  }
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_RESOLVER = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.hostUrl = "http://court-circuit-dious.c9users.io:8081";
   }
 
   if (environment === 'test') {

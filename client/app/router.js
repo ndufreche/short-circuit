@@ -6,9 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('user');
+  this.route('producer');
   this.route('store');
   this.route('vote');
+  this.route('subscription');
+  this.route('find');
+  this.route('producer-index', { path: '/producer' });
+  this.route('result');
+  this.route('producer-welcome', { path: '/producer/welcome' });
+  this.route('keyword');
 });
 
 export default Router;

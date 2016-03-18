@@ -13,6 +13,6 @@ export default DS.Model.extend({
   website: DS.attr('string'),
   picture: DS.attr('string'),
   avaragevote: DS.attr('number'),
-  owner: DS.belongsTo('user'),
+  owner: DS.belongsTo('producer'),
   vote: DS.hasMany('vote')
 });

@@ -34,7 +34,7 @@ module.exports = {
     avaragevote : { type: 'float' },
     
     owner : {
-      model: 'user',
+      model: 'producer',
       unique: true
     },
     

@@ -1,0 +1,33 @@
+<h1>Que recherchez vous ?</h1>
+
+<form class="search" {{action "search" on="submit"}}>
+
+  <p>
+    <ul class="recent-keyword">
+      <li class="heading">Les plus populaires:</li>
+      <li {{action "keyWord" "Apiculteur"}}>Apiculteur</li>
+      <li {{action "keyWord" "Fromager"}}>Fromager</li>
+      <li {{action "keyWord" "Boucher"}}>Boucher</li>
+      <li {{action "keyWord" "Maraïcher"}}>Maraïcher</li>
+    </ul>
+  </p>
+
+  <p>
+    <label for="searching">Vous pouvez recherchez un nom, un type ou même la catégorie du producteur souhaitée (Alimentation, Cosmetique...) </label>
+    {{input id="searching" value=filter key-up=autoComplete disabled=isDisabledSearch}} <br />
+  </p>
+
+  <p>
+    <label for="prodBio">Producteur BIO ?</label>
+    {{input type="checkbox" checked=checkBio id="prodBio"}}
+  </p>
+
+  <p>
+    <label for="findAll">Rechercher tous types de producteurs</label>
+    {{input type="checkbox" checked=checkAll id="findAll" disabled=isDisabledBox}}
+  </p>
+
+
+  <button>Allons-y</button>
+
+</form>

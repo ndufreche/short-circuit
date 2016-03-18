@@ -1,0 +1,76 @@
+<p>Bienvenue</p>
+
+<div {{action "showAccountAuthentication"}}>
+  J'ai déjà un compte
+</div>
+<div id="connection-form">
+  {{#if isAccountAuthentication}}
+  <h2>Formulaire de connexion</h2>
+  <form {{action "authenticate" on="submit"}}>
+    <p>
+      <label for="email">Email</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=email}}
+    </p>
+    <p>
+      <label for="password">Mot de passe</label>
+      {{input type="password" data-toggle="tooltip" data-placement="bottom" value=password}}
+    </p>
+    <p>
+      <button type="submit">Request invitation</button>
+    </p>
+  </form>
+  {{/if}}
+</div>
+<div {{action "showAccountCreation"}}>
+  Je suis producteur et je souhaiterais un compte
+</div>
+<div id="creation-form">
+  {{#if isAccountCreation}}
+  <h2>Formulaire de création de compte</h2>
+  <form {{action "createAccount" on="submit"}}>
+    <p>
+      <label for="siret">Prénom</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newFirstname}}
+    </p>
+    <p>
+      <label for="siret">Nom</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newLastname}}
+    </p>
+    <p>
+      <label for="email">Email</label>
+      {{input type="email" data-toggle="tooltip" data-placement="bottom" value=newEmail}}
+    </p>
+    <p>
+      <label for="password">Mot de passe</label>
+      {{input type="password" data-toggle="tooltip" data-placement="bottom" value=newPassword}}
+    </p>
+    <p>
+      <label for="password-confirm">Mot de passe confirmation</label>
+      {{input type="password" data-toggle="tooltip" data-placement="bottom" value=newPasswordConfirm}}
+    </p>
+    <p>
+      <label for="company">Raison social</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newCompany}}
+    </p>
+    <p>
+      <label for="siret">Numéro Siret</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newSiret}}
+    </p>
+    <p>
+      <label for="street">Rue</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newStreet}}
+    </p>
+    <p>
+      <label for="city">Ville</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newCity}}
+    </p>
+    <p>
+      <label for="zipcode">Code postal</label>
+      {{input type="text" data-toggle="tooltip" data-placement="bottom" value=newZipcode}}
+    </p>
+    <p>
+      <button type="submit" disabled={{isDisabled}}>Request invitation</button>
+    </p>
+  </form>
+  {{/if}}
+</div>
